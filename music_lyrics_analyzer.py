@@ -32,6 +32,7 @@ from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import classification_report, confusion_matrix, accuracy_score, roc_auc_score
 from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import StandardScaler
 
 # Utilities
 import re
@@ -250,9 +251,8 @@ class MusicLyricsAnalyzer:
             X_train: Features de treino
             y_train: Labels de treino
         """
-        # Definir modelos para testar
+        # Definir modelos para testar (removendo MultinomialNB para evitar problema com valores negativos)
         models_to_train = {
-            'naive_bayes': MultinomialNB(),
             'logistic_regression': LogisticRegression(random_state=42, max_iter=1000),
             'svm': SVC(random_state=42, probability=True),
             'random_forest': RandomForestClassifier(random_state=42, n_estimators=100),
@@ -264,10 +264,16 @@ class MusicLyricsAnalyzer:
         for name, model in models_to_train.items():
             print(f"Treinando {name}...")
             
-            # Criar pipeline
-            pipeline = Pipeline([
-                ('classifier', model)
-            ])
+            # Criar pipeline com escalonamento para modelos que precisam
+            if name in ['logistic_regression', 'svm']:
+                pipeline = Pipeline([
+                    ('scaler', StandardScaler()),
+                    ('classifier', model)
+                ])
+            else:
+                pipeline = Pipeline([
+                    ('classifier', model)
+                ])
             
             # Treinar modelo
             pipeline.fit(X_train, y_train)

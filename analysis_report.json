@@ -1,0 +1,217 @@
+{
+  "metadata": {
+    "analysis_date": "2025-06-02T14:22:55.305109",
+    "total_songs": 1000,
+    "analysis_period": "1959-2023"
+  },
+  "summary_statistics": {
+    "total_offensive_content": 400,
+    "percentage_offensive": 40.0,
+    "total_clean_content": 600,
+    "percentage_clean": 60.0
+  },
+  "model_performance": {
+    "logistic_regression": {
+      "accuracy": 1.0,
+      "classification_report": {
+        "0": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 120.0
+        },
+        "1": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 80.0
+        },
+        "accuracy": 1.0,
+        "macro avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 200.0
+        },
+        "weighted avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 200.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          120,
+          0
+        ],
+        [
+          0,
+          80
+        ]
+      ],
+      "auc_roc": 1.0
+    },
+    "svm": {
+      "accuracy": 1.0,
+      "classification_report": {
+        "0": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 120.0
+        },
+        "1": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 80.0
+        },
+        "accuracy": 1.0,
+        "macro avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 200.0
+        },
+        "weighted avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 200.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          120,
+          0
+        ],
+        [
+          0,
+          80
+        ]
+      ],
+      "auc_roc": 1.0
+    },
+    "random_forest": {
+      "accuracy": 1.0,
+      "classification_report": {
+        "0": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 120.0
+        },
+        "1": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 80.0
+        },
+        "accuracy": 1.0,
+        "macro avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 200.0
+        },
+        "weighted avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 200.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          120,
+          0
+        ],
+        [
+          0,
+          80
+        ]
+      ],
+      "auc_roc": 1.0
+    },
+    "gradient_boosting": {
+      "accuracy": 1.0,
+      "classification_report": {
+        "0": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 120.0
+        },
+        "1": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 80.0
+        },
+        "accuracy": 1.0,
+        "macro avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 200.0
+        },
+        "weighted avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 200.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          120,
+          0
+        ],
+        [
+          0,
+          80
+        ]
+      ],
+      "auc_roc": 1.0
+    }
+  },
+  "recommendations": [
+    "Modelo recomendado: logistic_regression (Accuracy: 1.0000)",
+    "Implementar sistema de moderação baseado nos modelos treinados",
+    "Monitorar tendências temporais de conteúdo ofensivo",
+    "Estabelecer thresholds de confiança para classificação automática"
+  ],
+  "decade_analysis": {
+    "count": {
+      "1950": 24,
+      "1960": 153,
+      "1970": 151,
+      "1980": 146,
+      "1990": 161,
+      "2000": 141,
+      "2010": 151,
+      "2020": 73
+    },
+    "sum": {
+      "1950": 12,
+      "1960": 63,
+      "1970": 51,
+      "1980": 68,
+      "1990": 68,
+      "2000": 49,
+      "2010": 62,
+      "2020": 27
+    },
+    "mean": {
+      "1950": 0.5,
+      "1960": 0.4117647058823529,
+      "1970": 0.33774834437086093,
+      "1980": 0.4657534246575342,
+      "1990": 0.422360248447205,
+      "2000": 0.3475177304964539,
+      "2010": 0.4105960264900662,
+      "2020": 0.3698630136986301
+    }
+  }
+}
